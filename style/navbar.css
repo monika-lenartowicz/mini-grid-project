@@ -3,15 +3,32 @@
 	padding: 0 2rem;
 }
 
-.main-navbar li {
+.navbar__item {
 	list-style: none;
 }
 
-.main-navbar a {
+.navbar__link {
 	text-transform: capitalize;
 	display: block;
 	padding: 1rem 0;
 	color: var(--primaryColor);
-	letter-spacing: var(--mainSpacing)
+	letter-spacing: var(--mainSpacing);
 	transition: var(--mainTransition);
+}
+
+.navbar__link:hover {
+	color: var(--mainBlack);
+}
+
+@media screen and (min-width: 992px) {
+	.navbar__list {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.navbar__link {
+		text-align: center;
+	}
 }
